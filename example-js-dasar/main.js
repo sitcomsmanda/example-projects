@@ -1,4 +1,6 @@
 function romanToInt(str) {
+  if (str == null) return -1;
+  
   function charToInt(c) {
     switch (c) {
       case "I":
@@ -19,8 +21,6 @@ function romanToInt(str) {
         return -1;
     }
   }
-
-  if (str == null) return -1;
 
   let num = charToInt(str.charAt(0));
   let pre, curr;
